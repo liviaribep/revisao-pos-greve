@@ -14,9 +14,9 @@
 <div class="parte-lista">
 <div class="container2">
             <h1 class="subtitulo"> Adicionar Elementos na Lista</h1>
-            <input type="text" class=”nome” placeholder="Seu nome">
+            <input type="text" class=”nome” placeholder="Seu nome" value="Lívia">
             <input type="text" placeholder="Digite uma tarefa">
-            <input type="text" class=”nome” placeholder="Digite seu sobrenome">
+            <input type="text" class=”nome” placeholder="Digite seu sobrenome" value="Ribeiro">
             <h3> Data: </h3>
             <button onclick="adicionar()"> + </button>
             <button onclick="remover()"> - </button>
@@ -35,9 +35,9 @@
         const segundoh3 = document.getElementsByTagName("h3")[1];
         segundoh3.innerHTML = "Teste!";
         //questao 3
-        const tarefa = document.getElementsByTagName("input")[1];
-        const container2 = document.getElementsByClassName("container2")[0];
-        container2.innerHTML = tarefa.value;
+        //const tarefa = document.getElementsByTagName("input")[1];
+        //const container2 = document.getElementsByClassName("container2")[0];
+        //container2.innerHTML = tarefa.value;
         //questao 4
         const paragrafo = document.createElement("p");
         paragrafo.innerText = "Lívia";
@@ -48,6 +48,18 @@
         const novadiv = document.createElement("div");
         novadiv.appendChild(botao);
         document.getElementById("tarefas").appendChild(novadiv);
+        //questao 6
+        const botremover = document.getElementsByTagName("button")[3];
+        botremover.addEventListener("click", function(){
+            document.getElementById("tarefas").remove();
+        });
+        //questao 7
+        const imagem = document.createElement("img");
+        imagem.src = "pen.jpg";
+        document.body.appendChild(imagem);
+        //questao 8 
+        const resposta = document.getElementsByTagName("input")[2];
+        document.getElementsByTagName("input")[0].value = resposta.value;
     </script>
 
 </body>
